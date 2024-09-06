@@ -1,7 +1,7 @@
 package br.com.questoes
 
 fun questao1(): Int {
-    var indice = 13
+    val indice = 13
     var soma = 0
     var k = 0
 

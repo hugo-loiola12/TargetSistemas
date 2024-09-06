@@ -1,17 +1,16 @@
 package br.com
 
-import br.com.questoes.questao1
-import br.com.questoes.questao2
-import br.com.questoes.questao4
+import br.com.questoes.*
 
 fun main() {
     println("==========")
-
+    // Mostrar soma
     println("SOMA = ${questao1()}")
 
     println("==========")
-
-    val numero = 5
+    // Verificar o número que o usuário inseriu está na sequencia
+    println("Coloque o número: ")
+    val numero = readln().toInt()
     if (questao2(numero)) {
         println("O $numero faz parte do Fibonacci")
     } else {
@@ -19,6 +18,8 @@ fun main() {
     }
 
     println("==========")
+
+    questao3()
 
     println("==========")
 
@@ -33,4 +34,13 @@ fun main() {
     questao4(opcao)
 
     println("==========")
+
+    println("Digite a string que deseja inverter: ")
+    val inputString = readln()
+
+    // Chama a função para inverter a string
+    val stringInvertida = questao5(inputString)
+
+    // Exibe o resultado
+    println("String invertida: $stringInvertida")
 }
