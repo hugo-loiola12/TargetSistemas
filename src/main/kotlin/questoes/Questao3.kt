@@ -2,12 +2,14 @@ package br.com.questoes
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.io.File
 
 data class DiaValor(val dia: Int, val valor: Double)
 
 
 fun questao3() {
-    val json = "../../dados.json"
+    val caminhoJson = "/home/hugo/Documentos/TargetSistemas/src/main/dados.json"
+    val json = File(caminhoJson).readText()
 
     // Usando Gson para converter o JSON em uma lista de objetos
     val gson = Gson()
