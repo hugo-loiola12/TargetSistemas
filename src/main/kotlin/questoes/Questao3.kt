@@ -8,7 +8,7 @@ data class DiaValor(val dia: Int, val valor: Double)
 
 
 fun questao3() {
-    val caminhoJson = "/home/hugo/Documentos/TargetSistemas/src/main/dados.json"
+    val caminhoJson = "src/main/dados.json"
     val json = File(caminhoJson).readText()
 
     // Usando Gson para converter o JSON em uma lista de objetos
