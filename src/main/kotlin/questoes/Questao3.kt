@@ -8,7 +8,7 @@ data class DiaValor(val dia: Int, val valor: Double)
 
 
 fun questao3() {
-    val caminhoJson = "src/main/dados.json"
+    val caminhoJson = "src/main/data/dados.json"
     val json = File(caminhoJson).readText()
 
     // Usando Gson para converter o JSON em uma lista de objetos
@@ -22,8 +22,9 @@ fun questao3() {
     val valorMaximo = lista.maxByOrNull { it.valor }?.valor
     val diasSemValor = lista.filter { it.valor == 0.0 }
 
-    println("Soma dos valores: $somaValores")
-    println("Média dos valores (desconsiderando 0): $mediaValores")
-    println("Valor máximo: $valorMaximo")
+    println("Soma dos valores: R$%.2f".format(somaValores))
+    println("Média dos valores (desconsiderando 0): R$%.2f".format(mediaValores))
+    println("Valor máximo: R$%.2f".format(valorMaximo))
     println("Dias sem valor: ${diasSemValor.map { it.dia }}")
+
 }
